@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="144" width="704" viewBox="0 0 704 144" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+<path d="M 90,48 L 90,64" fill="black" stroke="black"/><path d="M 86,48 L 86,64" fill="black" stroke="black"/>
+<path d="M 138,48 L 138,64" fill="black" stroke="black"/><path d="M 134,48 L 134,64" fill="black" stroke="black"/>
+<path d="M 202,64 L 202,80" fill="black" stroke="black"/><path d="M 198,64 L 198,80" fill="black" stroke="black"/>
+<path d="M 226,48 L 226,64" fill="black" stroke="black"/><path d="M 222,48 L 222,64" fill="black" stroke="black"/>
+<path d="M 274,48 L 274,64" fill="black" stroke="black"/><path d="M 270,48 L 270,64" fill="black" stroke="black"/>
+<path d="M 298,64 L 298,80" fill="black" stroke="black"/><path d="M 294,64 L 294,80" fill="black" stroke="black"/>
+<path d="M 354,32 L 354,80" fill="black" stroke="black"/><path d="M 350,32 L 350,80" fill="black" stroke="black"/>
+<path d="M 466,32 L 466,80" fill="black" stroke="black"/><path d="M 462,32 L 462,80" fill="black" stroke="black"/>
+<path d="M 490,32 L 490,80" fill="black" stroke="black"/><path d="M 486,32 L 486,80" fill="black" stroke="black"/>
+<path d="M 514,48 L 514,64" fill="black" stroke="black"/><path d="M 510,48 L 510,64" fill="black" stroke="black"/>
+<path d="M 586,48 L 586,64" fill="black" stroke="black"/><path d="M 582,48 L 582,64" fill="black" stroke="black"/>
+<path d="M 698,64 L 698,80" fill="black" stroke="black"/><path d="M 694,64 L 694,80" fill="black" stroke="black"/>
+<path d="M 96,30 L 112,30" fill="black" stroke="black"/><path d="M 96,34 L 112,34" fill="black" stroke="black"/>
+<path d="M 168,30 L 192,30" fill="black" stroke="black"/><path d="M 168,34 L 192,34" fill="black" stroke="black"/>
+<path d="M 232,30 L 248,30" fill="black" stroke="black"/><path d="M 232,34 L 248,34" fill="black" stroke="black"/>
+<path d="M 520,30 L 544,30" fill="black" stroke="black"/><path d="M 520,34 L 544,34" fill="black" stroke="black"/>
+<path d="M 592,30 L 616,30" fill="black" stroke="black"/><path d="M 592,34 L 616,34" fill="black" stroke="black"/>
+<path d="M 664,30 L 688,30" fill="black" stroke="black"/><path d="M 664,34 L 688,34" fill="black" stroke="black"/>
+<path d="M 152,62 L 176,62" fill="black" stroke="black"/><path d="M 152,66 L 176,66" fill="black" stroke="black"/>
+<path d="M 368,62 L 392,62" fill="black" stroke="black"/><path d="M 368,66 L 392,66" fill="black" stroke="black"/>
+<path d="M 648,62 L 672,62" fill="black" stroke="black"/><path d="M 648,66 L 672,66" fill="black" stroke="black"/>
+<path d="M 16,94 L 48,94" fill="black" stroke="black"/><path d="M 16,98 L 48,98" fill="black" stroke="black"/>
+<path d="M 88,94 L 120,94" fill="black" stroke="black"/><path d="M 88,98 L 120,98" fill="black" stroke="black"/>
+<path d="M 152,94 L 192,94" fill="black" stroke="black"/><path d="M 152,98 L 192,98" fill="black" stroke="black"/>
+<path d="M 224,94 L 256,94" fill="black" stroke="black"/><path d="M 224,98 L 256,98" fill="black" stroke="black"/>
+<path d="M 328,94 L 344,94" fill="black" stroke="black"/><path d="M 328,98 L 344,98" fill="black" stroke="black"/>
+<path d="M 512,94 L 544,94" fill="black" stroke="black"/><path d="M 512,98 L 544,98" fill="black" stroke="black"/>
+<path d="M 584,94 L 616,94" fill="black" stroke="black"/><path d="M 584,98 L 616,98" fill="black" stroke="black"/>
+<path d="M 648,94 L 688,94" fill="black" stroke="black"/><path d="M 648,98 L 688,98" fill="black" stroke="black"/>
+<rect class="black" x="684" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="684" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="684" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="684" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="676" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="676" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="676" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="676" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="668" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="668" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="668" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="660" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="660" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="660" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="652" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="652" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="652" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="644" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="644" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="644" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="644" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="636" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="636" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="636" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="636" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="620" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="620" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="612" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="612" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="612" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="612" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="604" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="604" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="604" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="596" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="596" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="588" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="588" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="580" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="580" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="572" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="572" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="572" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="572" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="572" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="564" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="564" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="564" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="548" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="548" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="540" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="540" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="540" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="540" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="532" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="532" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="532" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="524" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="524" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="516" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="516" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="508" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="508" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="500" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="500" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="500" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="500" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="500" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="492" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="492" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="492" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="476" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="476" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="476" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="476" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="476" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="468" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="468" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="468" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="468" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="468" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="452" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="452" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="452" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="452" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="452" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="444" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="444" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="444" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="444" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="444" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="436" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="428" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="420" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="412" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="412" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="412" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="412" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="412" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="404" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="404" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="404" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="404" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="404" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="388" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="380" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="372" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="364" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="356" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="340" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="340" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="340" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="340" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="340" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="332" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="332" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="332" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="332" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="332" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="324" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="316" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="316" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="308" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="308" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="300" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="300" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="292" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="292" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="284" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="284" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="284" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="284" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="284" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="276" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="276" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="276" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="276" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="276" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="260" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="260" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="260" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="252" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="252" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="252" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="252" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="252" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="244" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="244" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="236" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="236" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="228" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="228" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="220" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="220" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="212" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="212" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="212" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="212" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="212" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="204" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="204" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="204" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="188" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="188" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="188" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="188" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="180" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="180" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="180" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="180" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="172" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="172" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="172" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="164" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="164" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="164" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="156" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="156" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="156" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="148" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="148" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="148" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="148" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="140" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="140" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="140" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="140" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="124" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="124" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="124" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="116" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="116" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="116" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="116" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="116" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="108" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="108" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="100" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="100" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="92" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="92" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="84" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="84" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="76" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="76" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="76" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="76" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="76" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="68" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="68" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="68" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="52" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="52" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="44" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="44" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="44" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="44" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="44" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="36" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="36" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="36" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="28" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="28" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="28" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="20" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="20" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="20" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="12" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="12" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="12" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="12" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="12" y="8" width="8" height="16" fill="black"/>
+<rect class="black" x="4" y="72" width="8" height="16" fill="black"/>
+<rect class="black" x="4" y="56" width="8" height="16" fill="black"/>
+<rect class="black" x="4" y="40" width="8" height="16" fill="black"/>
+<rect class="black" x="4" y="24" width="8" height="16" fill="black"/>
+<rect class="black" x="4" y="8" width="8" height="16" fill="black"/>
+<g class="text">
+<text fill="black" x="56" y="20">╗</text>
+<text fill="black" x="128" y="20">╗</text>
+<text fill="black" x="200" y="20">╗</text>
+<text fill="black" x="264" y="20">╗</text>
+<text fill="black" x="304" y="20">╗</text>
+<text fill="black" x="352" y="20">╗</text>
+<text fill="black" x="424" y="20">╗</text>
+<text fill="black" x="464" y="20">╗</text>
+<text fill="black" x="488" y="20">╗</text>
+<text fill="black" x="552" y="20">╗</text>
+<text fill="black" x="624" y="20">╗</text>
+<text fill="black" x="696" y="20">╗</text>
+<text fill="black" x="32" y="36">╔══</text>
+<text fill="black" x="64" y="36">╗</text>
+<text fill="black" x="88" y="36">╔</text>
+<text fill="black" x="136" y="36">╗</text>
+<text fill="black" x="160" y="36">╔</text>
+<text fill="black" x="200" y="36">╝</text>
+<text fill="black" x="224" y="36">╔</text>
+<text fill="black" x="272" y="36">╗</text>
+<text fill="black" x="312" y="36">╗</text>
+<text fill="black" x="424" y="36">║</text>
+<text fill="black" x="512" y="36">╔</text>
+<text fill="black" x="552" y="36">╝</text>
+<text fill="black" x="584" y="36">╔</text>
+<text fill="black" x="624" y="36">╝</text>
+<text fill="black" x="656" y="36">╔</text>
+<text fill="black" x="696" y="36">╝</text>
+<text fill="black" x="60" y="52">╔╝</text>
+<text fill="black" x="200" y="52">╗</text>
+<text fill="black" x="296" y="52">╔</text>
+<text fill="black" x="320" y="52">╗</text>
+<text fill="black" x="400" y="52">╗</text>
+<text fill="black" x="560" y="52">╗</text>
+<text fill="black" x="632" y="52">╗</text>
+<text fill="black" x="696" y="52">╗</text>
+<text fill="black" x="32" y="68">╔══</text>
+<text fill="black" x="64" y="68">╗</text>
+<text fill="black" x="144" y="68">╚</text>
+<text fill="black" x="304" y="68">╚</text>
+<text fill="black" x="328" y="68">╗</text>
+<text fill="black" x="360" y="68">╚</text>
+<text fill="black" x="400" y="68">╝</text>
+<text fill="black" x="432" y="68">╔══</text>
+<text fill="black" x="560" y="68">║</text>
+<text fill="black" x="636" y="68">║╚</text>
+<text fill="black" x="64" y="84">╔╝╚</text>
+<text fill="black" x="132" y="84">╔╝</text>
+<text fill="black" x="208" y="84">╚</text>
+<text fill="black" x="268" y="84">╔╝</text>
+<text fill="black" x="312" y="84">╚</text>
+<text fill="black" x="424" y="84">║</text>
+<text fill="black" x="496" y="84">╚</text>
+<text fill="black" x="560" y="84">╔╝╚</text>
+<text fill="black" x="628" y="84">╔╝</text>
+<text fill="black" x="8" y="100">╚</text>
+<text fill="black" x="56" y="100">╝</text>
+<text fill="black" x="80" y="100">╚</text>
+<text fill="black" x="136" y="100">╝ ╚</text>
+<text fill="black" x="208" y="100">╝ ╚</text>
+<text fill="black" x="280" y="100">╝ ╚═╝</text>
+<text fill="black" x="320" y="100">╚</text>
+<text fill="black" x="352" y="100">╝</text>
+<text fill="black" x="416" y="100">╚═╝</text>
+<text fill="black" x="476" y="100">╚═╝╚═╝ ╚</text>
+<text fill="black" x="552" y="100">╝</text>
+<text fill="black" x="576" y="100">╚</text>
+<text fill="black" x="632" y="100">╝ ╚</text>
+<text fill="black" x="696" y="100">╝</text>
+</g>
+</svg>
