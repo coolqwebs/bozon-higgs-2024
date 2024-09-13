@@ -7,7 +7,7 @@ import {
 
 const FAQ = () => {
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-sm overflow-y-auto">
+    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-lg overflow-y-auto">
       <h2 className="text-3xl mb-5 text-center">FAQ</h2>
       <div className="w-[80%]">
         <Accordion type="multiple" className="w-full">

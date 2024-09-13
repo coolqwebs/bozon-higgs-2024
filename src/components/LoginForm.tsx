@@ -30,7 +30,7 @@ const LoginForm = () => {
     console.log(values);
     setIsAuthenticated(true);
     form.reset();
-    navigate("/problemset");
+    navigate("/challenges");
   }
 
   return (

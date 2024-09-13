@@ -7,7 +7,7 @@ const Main = () => {
   const [isLogin, setIsLogin] = useState(false);
   return (
     <section className="w-full h-full flex items-center justify-center gap-5">
-      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full flex flex-col gap-5 backdrop-blur-sm">
+      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full flex flex-col gap-5 backdrop-blur-md">
         <p>
           The{" "}
           <span className="text-lime-500 dark:text-[#C3D82C]">
@@ -43,12 +43,12 @@ const Main = () => {
           cryptography, and the code is the key to the solution!
         </p>
       </section>
-      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full backdrop-blur-sm">
+      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full backdrop-blur-lg">
         <h2 className="text-3xl text-center mb-5">Sign in/up</h2>
         {isLogin ? <LoginForm /> : <RegisterForm />}
 
         {isLogin ? (
-          <p className="text-center text-xl">
+          <p className="text-center text-xl mt-5">
             Don't have an account?
             <Button
               className="text-xl"
@@ -59,7 +59,7 @@ const Main = () => {
             </Button>
           </p>
         ) : (
-          <p className="text-center text-xl">
+          <p className="text-center text-xl mt-5">
             Already have an account?
             <Button
               className="text-xl"
