@@ -10,7 +10,7 @@ import {
 
 const Scoreboard = () => {
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl py-5 px-10 backdrop-blur-lg">
+    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl py-5 px-10 backdrop-blur-xl">
       <Table>
         <TableCaption>A list of participants</TableCaption>
         <TableHeader>

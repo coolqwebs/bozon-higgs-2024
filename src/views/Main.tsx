@@ -7,7 +7,7 @@ const Main = () => {
   const [isLogin, setIsLogin] = useState(false);
   return (
     <section className="w-full h-full flex items-center justify-center gap-5">
-      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full flex flex-col gap-5 backdrop-blur-md">
+      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full flex flex-col gap-5 backdrop-blur-3xl overflow-auto">
         <p>
           The{" "}
           <span className="text-lime-500 dark:text-[#C3D82C]">
@@ -38,12 +38,18 @@ const Main = () => {
           <li>- Internet connection</li>
           <li>- The desire for victory :&#41;</li>
         </ul>
+        <img
+          className="contain border border-gray-500 dark:border-slate-300"
+          src="hazker.webp"
+          alt="hazker"
+        />
         <p>
-          Join the "Higgs Boson" - where bits and bytes create a symphony of
-          cryptography, and the code is the key to the solution!
+          If you feel like the guy above, join the "Higgs Boson" - where bits
+          and bytes create a symphony of cryptography, and the code is the key
+          to the solution!
         </p>
       </section>
-      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full backdrop-blur-lg">
+      <section className="border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 flex-1 h-full backdrop-blur-3xl">
         <h2 className="text-3xl text-center mb-5">Sign in/up</h2>
         {isLogin ? <LoginForm /> : <RegisterForm />}
 

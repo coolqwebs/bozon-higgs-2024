@@ -6,6 +6,7 @@ import { Link, Outlet } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import Mouse from "@/components/Mouse";
 import { useState } from "react";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const Layout = () => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
@@ -19,27 +20,29 @@ const Layout = () => {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="w-screen h-screen flex flex-col items-center justify-center gap-10 py-5 font-mono bg-black bg-[url('./hui1.gif')] bg-right-bottom bg-no-repeat"
+      className="w-screen h-screen flex flex-col items-center justify-center gap-10 py-5 font-mono bg-[url('noise1.gif')] bg-cover"
     >
       {/* <video
         autoPlay
         muted
         loop
         id="myVideo"
-        className="fixed -z-50 right-0 bottom-0 min-w-svw min-h-svh"
+        className="fixed -z-50 left-0 top-0 min-w-full min-h-full"
       >
-        <source src="bg.mp4" type="video/mp4" />
+        <source src="./code.mp4" type="video/mp4" />
       </video> */}
-      <header className="w-[80%] h-24 flex items-center justify-between px-3">
-        <div>
+      <header className="w-[80%] flex items-center justify-between px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl">
+        <div className="flex items-center justify-center gap-8">
           <Link to="/">
             <img src={Logo} alt="" className="logo" width="400" />
           </Link>
         </div>
-        <img src="./hui.gif" alt="circle" />
         <Mouse x={coordinates.x} y={coordinates.y} />
         <nav>
           <ul className="flex gap-5">
+            <li>
+              <ModeToggle />
+            </li>
             {isAuthenticated && (
               <li>
                 <Button variant="outline" size="icon">
@@ -63,13 +66,6 @@ const Layout = () => {
         <Outlet />
       </main>
       <Toaster />
-      <div>
-        <img
-          src="./hui1.gif"
-          alt="circle1"
-          className="absolute bottom-0 left-0 -z-10"
-        />
-      </div>
     </div>
   );
 };

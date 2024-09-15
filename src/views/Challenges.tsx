@@ -11,21 +11,22 @@ const Challenges = () => {
   // const { toast } = useToast();
 
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-lg">
+    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-xl">
       <div className="w-full h-full flex">
         <aside className="w-[25%] border-r-[2px] border-collapse border-gray-500 dark:border-slate-300">
           <ul className="h-full flex flex-col gap-5">
             <li
               className={cn(
                 "w-full h-[20%]  flex items-center justify-center",
-                tab === 1 && "border-l-[15px] border-slate-300 border-collapse"
+                tab === 1 &&
+                  "border-l-[15px] border-gray-500 dark:border-slate-300 border-collapse"
               )}
             >
               <Button
                 onClick={() => setTab(1)}
                 variant="link"
                 className={cn(
-                  "text-4xl leading-none text-slate-300",
+                  "text-4xl leading-none text-slate-900 dark:text-slate-300",
                   tab === 1 && "text-red-500"
                 )}
               >
@@ -35,14 +36,15 @@ const Challenges = () => {
             <li
               className={cn(
                 "w-full h-[20%]  flex items-center justify-center",
-                tab === 2 && "border-l-[15px] border-slate-300 border-collapse"
+                tab === 2 &&
+                  "border-l-[15px] border-gray-500 dark:border-slate-300 border-collapse"
               )}
             >
               <Button
                 onClick={() => setTab(2)}
                 variant="link"
                 className={cn(
-                  "text-4xl leading-none text-slate-300",
+                  "text-4xl leading-none text-slate-900 dark:text-slate-300",
                   tab === 2 && "text-red-500"
                 )}
               >
@@ -52,14 +54,15 @@ const Challenges = () => {
             <li
               className={cn(
                 "w-full h-[20%]  flex items-center justify-center",
-                tab === 3 && "border-l-[15px] border-slate-300 border-collapse"
+                tab === 3 &&
+                  "border-l-[15px] border-gray-500 dark:border-slate-300 border-collapse"
               )}
             >
               <Button
                 onClick={() => setTab(3)}
                 variant="link"
                 className={cn(
-                  "text-4xl leading-none text-slate-300",
+                  "text-4xl leading-none text-slate-900 dark:text-slate-300",
                   tab === 3 && "text-red-500"
                 )}
               >
@@ -69,14 +72,15 @@ const Challenges = () => {
             <li
               className={cn(
                 "w-full h-[20%]  flex items-center justify-center",
-                tab === 4 && "border-l-[15px] border-slate-300 border-collapse"
+                tab === 4 &&
+                  "border-l-[15px] border-gray-500 dark:border-slate-300 border-collapse"
               )}
             >
               <Button
                 onClick={() => setTab(4)}
                 variant="link"
                 className={cn(
-                  "text-4xl leading-none text-slate-300",
+                  "text-4xl leading-none text-slate-900 dark:text-slate-300",
                   tab === 4 && "text-red-500"
                 )}
               >
@@ -86,14 +90,15 @@ const Challenges = () => {
             <li
               className={cn(
                 "w-full h-[20%]  flex items-center justify-center",
-                tab === 5 && "border-l-[15px] border-slate-300 border-collapse"
+                tab === 5 &&
+                  "border-l-[15px] border-gray-500 dark:border-slate-300 border-collapse"
               )}
             >
               <Button
                 onClick={() => setTab(5)}
                 variant="link"
                 className={cn(
-                  "text-4xl leading-none text-slate-300",
+                  "text-4xl leading-none text-slate-900 dark:text-slate-300",
                   tab === 5 && "text-red-500"
                 )}
               >
