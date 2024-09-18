@@ -20,17 +20,8 @@ const Layout = () => {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="w-screen h-screen flex flex-col items-center justify-center gap-10 py-5 font-mono bg-[url('noise1.gif')] bg-cover"
+      className={`w-screen h-screen flex flex-col items-center justify-center gap-10 py-5 font-mono bg-[url('bg.jpg')] bg-cover`}
     >
-      {/* <video
-        autoPlay
-        muted
-        loop
-        id="myVideo"
-        className="fixed -z-50 left-0 top-0 min-w-full min-h-full"
-      >
-        <source src="./code.mp4" type="video/mp4" />
-      </video> */}
       <header className="w-[80%] flex items-center justify-between px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl">
         <div className="flex items-center justify-center gap-8">
           <Link to="/">
