@@ -1,0 +1,39 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    env:
+      PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      run: |
+        aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+
+    - name: Build and Push Docker Image
+      run: |
+        docker build -t ${{ secrets.LATEST_IMAGE}} .
+        docker push ${{ secrets.LATEST_IMAGE}}
+
+    - name: Deploy to EC2
+      run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 400 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@51.20.144.82 'cd /home/ec2-user/ && \
+          ./deploy_front.sh'
