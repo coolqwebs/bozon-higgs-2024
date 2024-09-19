@@ -1,12 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { getLevels } from "@/lib/queries";
 // import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
+import { useQuery } from "@tanstack/react-query";
 import { CircleCheckBig } from "lucide-react";
 import { useState } from "react";
 
 const Challenges = () => {
+  const { data } = useQuery({
+    queryKey: ["challenges"],
+    queryFn: getLevels,
+    refetchOnWindowFocus: false,
+    refetchIntervalInBackground: false,
+    refetchInterval: false,
+  });
+  console.log(data);
   const [tab, setTab] = useState(1);
   // const { toast } = useToast();
 

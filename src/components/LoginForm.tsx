@@ -8,14 +8,20 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { login } from "@/lib/queries";
 import { loginSchema } from "@/lib/shema";
 import { useAuthStore } from "@/store/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
+import { toast } from "./ui/use-toast";
 
 const LoginForm = () => {
+  const mutation = useMutation({
+    mutationFn: login,
+  });
   const setIsAuthenticated = useAuthStore((state) => state.setIsAuthenticated);
   const navigate = useNavigate();
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -26,12 +32,20 @@ const LoginForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof loginSchema>) {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof loginSchema>) => {
+    const data = await mutation.mutateAsync(values);
+    if (data.errors) {
+      toast({
+        variant: "destructive",
+        title: data.errors[""][0],
+        description: "Please check your data and try again.",
+      });
+      return;
+    }
     setIsAuthenticated(true);
     form.reset();
     navigate("/challenges");
-  }
+  };
 
   return (
     <Form {...form}>
@@ -56,7 +70,11 @@ const LoginForm = () => {
             <FormItem>
               <FormLabel className="text-xl">Password</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your password" {...field} />
+                <Input
+                  type="password"
+                  placeholder="Enter your password"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

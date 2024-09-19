@@ -6,7 +6,10 @@ import { Link, Outlet } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import Mouse from "@/components/Mouse";
 import { useState } from "react";
-import { ModeToggle } from "@/components/ModeToggle";
+import Timer from "@/components/Timer";
+import Marquee from "@/components/Marquee/Marquee";
+
+//TODO : add marquee with stupid phrases
 
 const Layout = () => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
@@ -20,29 +23,21 @@ const Layout = () => {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="w-screen h-screen flex flex-col items-center justify-center gap-10 py-5 font-mono bg-[url('noise1.gif')] bg-cover"
+      className="w-svw h-svh flex flex-col items-center justify-center gap-10 py-5 font-mono bg-[url('/noise1.gif')] bg-contain"
     >
-      {/* <video
-        autoPlay
-        muted
-        loop
-        id="myVideo"
-        className="fixed -z-50 left-0 top-0 min-w-full min-h-full"
-      >
-        <source src="./code.mp4" type="video/mp4" />
-      </video> */}
-      <header className="w-[80%] flex items-center justify-between px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl">
+      <header className="w-[80%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex items-center justify-between">
         <div className="flex items-center justify-center gap-8">
           <Link to="/">
-            <img src={Logo} alt="" className="logo" width="400" />
+            <img src={Logo} alt="" className="logo" width="400" height="20" />
           </Link>
         </div>
+        <Timer className="md:order-last lg:-order-none" />
         <Mouse x={coordinates.x} y={coordinates.y} />
         <nav>
           <ul className="flex gap-5">
-            <li>
+            {/* <li>
               <ModeToggle />
-            </li>
+            </li> */}
             {isAuthenticated && (
               <li>
                 <Button variant="outline" size="icon">
@@ -65,6 +60,7 @@ const Layout = () => {
       <main className="w-[80%] h-[80%] flex items-start justify-center">
         <Outlet />
       </main>
+      <Marquee />
       <Toaster />
     </div>
   );

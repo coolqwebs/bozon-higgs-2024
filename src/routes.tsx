@@ -22,9 +22,9 @@ export const router = createBrowserRouter([
       {
         path: "challenges",
         element: (
-          // <WithAuth>
-          <Challenges />
-          // </WithAuth>
+          <WithAuth>
+            <Challenges />
+          </WithAuth>
         ),
       },
       {

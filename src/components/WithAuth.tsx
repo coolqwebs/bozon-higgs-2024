@@ -8,7 +8,7 @@ interface Props {
 
 const WithAuth: FC<Props> = ({ children }) => {
   const location = useLocation();
-  const token = localStorage.getItem("accessToken");
+  // const token = localStorage.getItem("accessToken");
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
   if (!isAuthenticated) {
