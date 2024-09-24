@@ -1,9 +1,8 @@
 .main__container {
-  width: 100svh;
+  width: 100svw;
   margin-inline: auto;
   position: absolute;
-  left: -45svh;
-  rotate: -90deg;
+  bottom: 0;
 }
 
 .marquee {
@@ -12,8 +11,7 @@
   overflow: hidden;
   user-select: none;
   gap: 5rem;
-  // border-top: 2px dashed lightgray;
-  // border-bottom: 2px dashed lightgray;
+
 }
 
 .marquee__content {
@@ -21,24 +19,21 @@
   display: flex;
   justify-content: space-around;
   gap: 5rem;
-  min-width: 100%;
+  min-width: 100svw;
 }
 
 .marquee__content>* {
   flex: 0 0 auto;
   color: red;
   text-align: center;
-  // background: #e8daef;
-  // margin: 2px;
-  // padding: 1rem 2rem;
-  // border-radius: 0.25rem;
+  white-space: nowrap;
 }
 
 .marquee__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 180px;
+  font-size: 18px;
   letter-spacing: 1;
 }
 

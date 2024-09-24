@@ -1,5 +1,5 @@
-import { useAuthStore } from "@/store/auth";
-import React, { FC } from "react";
+import { useAppSelector } from "@/store/store";
+import { FC } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
 interface Props {
@@ -8,10 +8,10 @@ interface Props {
 
 const WithAuth: FC<Props> = ({ children }) => {
   const location = useLocation();
-  // const token = localStorage.getItem("accessToken");
-  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const accessToken = localStorage.getItem("accessToken");
+  const isAuth = useAppSelector((state) => state.auth.isAuth);
 
-  if (!isAuthenticated) {
+  if (!isAuth && accessToken) {
     return <Navigate to={"/"} state={{ from: location }} replace={true} />;
   }
 

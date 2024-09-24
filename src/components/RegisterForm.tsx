@@ -13,15 +13,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useToast } from "./ui/use-toast";
-import { register } from "@/lib/queries";
-import { useMutation } from "@tanstack/react-query";
 import { Spinner } from "./ui/spinner";
+import { Link } from "react-router-dom";
+import { useRegisterMutation } from "@/store/api";
 
 const RegisterForm = () => {
-  const mutation = useMutation({
-    mutationFn: register,
-  });
   const { toast } = useToast();
+  const [register, { isLoading }] = useRegisterMutation();
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -33,26 +31,27 @@ const RegisterForm = () => {
   });
 
   async function onSubmit(values: z.infer<typeof registerSchema>) {
-    const data = await mutation.mutateAsync(values);
-    if (data.errors) {
+    try {
+      await register(values).unwrap();
+      toast({
+        variant: "default",
+        title: "You've successfully registered!",
+        description: "Check your email for next steps.",
+      });
+      form.reset();
+    } catch (error: any) {
       toast({
         variant: "destructive",
-        title: "Oops, something went wrong",
-        description: data.errors[""][0],
+        title: "Something went wrong",
+        description: error.data.errors[""][0],
       });
-      return;
     }
-    toast({
-      variant: "default",
-      title: "You've successfully registered!",
-      description: "Check your email for verification link.",
-    });
-    form.reset();
   }
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <h2 className="text-3xl text-center mb-5">Sign up</h2>
         <FormField
           control={form.control}
           name="userName"
@@ -85,9 +84,16 @@ const RegisterForm = () => {
         />
         <div className="w-full flex justify-center items-center">
           <Button type="submit" size="lg">
-            {mutation.isPending ? <Spinner /> : "Register"}
+            {isLoading ? <Spinner /> : "Register"}
           </Button>
         </div>
+
+        <p className="text-center text-xl mt-5">
+          Already have an account?
+          <Link className="text-primary text-xl ml-2" to={"/login"}>
+            Sign in
+          </Link>
+        </p>
       </form>
     </Form>
   );

@@ -8,21 +8,21 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { login } from "@/lib/queries";
 import { loginSchema } from "@/lib/shema";
-import { useAuthStore } from "@/store/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
-import { toast } from "./ui/use-toast";
+import { useToast } from "./ui/use-toast";
+import { useLoginMutation } from "@/store/api";
+import { useAppDispatch } from "@/store/store";
+import { setAuthData } from "@/store/slice";
+import { Spinner } from "./ui/spinner";
 
 const LoginForm = () => {
-  const mutation = useMutation({
-    mutationFn: login,
-  });
-  const setIsAuthenticated = useAuthStore((state) => state.setIsAuthenticated);
+  const { toast } = useToast();
+  const [login, { isLoading }] = useLoginMutation();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -33,23 +33,25 @@ const LoginForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof loginSchema>) => {
-    const data = await mutation.mutateAsync(values);
-    if (data.errors) {
+    try {
+      const data = await login(values).unwrap();
+      dispatch(setAuthData(data));
+      form.reset();
+      navigate("/challenges");
+    } catch (error: any) {
       toast({
         variant: "destructive",
-        title: data.errors[""][0],
-        description: "Please check your data and try again.",
+        title: "Something went wrong",
+        description: error.data.errors[""][0],
       });
-      return;
     }
-    setIsAuthenticated(true);
-    form.reset();
-    navigate("/challenges");
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <h2 className="text-3xl text-center mb-5">Sign in</h2>
+
         <FormField
           control={form.control}
           name="email"
@@ -82,9 +84,15 @@ const LoginForm = () => {
         />
         <div className="w-full flex justify-center items-center">
           <Button type="submit" size="lg" className="">
-            Login
+            {isLoading ? <Spinner /> : "Login"}
           </Button>
         </div>
+        <p className="text-center text-xl mt-5">
+          Don't have an account?
+          <Link className="text-primary text-xl ml-2" to="/register">
+            Sign up
+          </Link>
+        </p>
       </form>
     </Form>
   );

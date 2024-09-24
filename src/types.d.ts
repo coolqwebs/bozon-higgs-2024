@@ -8,8 +8,11 @@ interface IUser {
 }
 
 interface IError {
-  errors: {
-    [key: string]: string[];
+  status: number;
+  data: {
+    errors: {
+      [key: string]: string[];
+    };
   };
 }
 
@@ -22,4 +25,9 @@ interface ILevel {
   hint?: string;
   token: string;
   nextLevelId?: string;
+}
+
+interface ILeaderboardData {
+  totalUserCount: number;
+  leaders: IUser[];
 }
