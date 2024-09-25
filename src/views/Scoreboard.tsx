@@ -38,9 +38,11 @@ const Scoreboard = () => {
 
   // console.log(dayjs.isUTC("2024-09-24T15:43:12.444606"));
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl py-5 px-10 backdrop-blur-xl text-2xl">
-      <Table>
-        <TableCaption className="text-2xl">A list of participants</TableCaption>
+    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-10 backdrop-blur-xl text-2xl overflow-y-auto">
+      <Table className="p-10">
+        <TableCaption className="text-2xl">
+          Total count of participants: {data?.totalUserCount}
+        </TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="text-2xl">#</TableHead>

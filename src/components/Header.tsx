@@ -32,27 +32,37 @@ const Header = () => {
     <header className="w-[80%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex items-center justify-between">
       <div className="flex items-center justify-center gap-8">
         <Link to="/">
-          <img src={Logo} alt="" className="logo" width="400" height="20" />
+          <img
+            src={Logo}
+            alt=""
+            className="logo -mb-6"
+            width="400"
+            height="20"
+            // style={{
+            //   filter:
+            //     "invert(21%) sepia(75%) saturate(3822%) hue-rotate(257deg) brightness(83%) contrast(105%)",
+            // }}
+          />
         </Link>
       </div>
       <Timer className="md:order-last lg:-order-none" />
       <Mouse />
       <nav>
         <ul className="flex gap-8">
-          <li className="text-xl">
+          <li className="text-2xl">
             <Link to="/scoreboard">Scoreboard</Link>
           </li>
           {isAuth && (
-            <li className="text-xl">
+            <li className="text-2xl">
               <Link to="/challenges">Challenges</Link>
             </li>
           )}
-          <li className="text-xl">
+          <li className="text-2xl">
             <Link to="/faq">FAQ</Link>
           </li>
 
           {!isAuth ? (
-            <li className="text-xl">
+            <li className="text-2xl">
               <Link to="/login">Sign in</Link>
             </li>
           ) : (
@@ -63,13 +73,18 @@ const Header = () => {
                   <AvatarFallback>{user?.userName[0]}</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="w-56" align="end">
                 <DropdownMenuItem>
-                  <Link to="/profile">Profile</Link>
+                  <Link className="text-2xl w-full" to="/profile">
+                    Profile
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <p className="cursor-pointer" onClick={logoutHandler}>
+                  <p
+                    className="w-full text-2xl cursor-pointer"
+                    onClick={logoutHandler}
+                  >
                     Log out
                   </p>
                 </DropdownMenuItem>

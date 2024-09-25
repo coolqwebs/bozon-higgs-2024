@@ -14,8 +14,8 @@ const Mouse = () => {
   }, []);
   return (
     <div className="w-20 h-20 mx-5 text-right flex flex-col items-end justify-center gap-2">
-      <p className="backdrop-blur-lg">{coordinates.x}</p>
-      <p className="backdrop-blur-lg">{coordinates.y}</p>
+      <p>{coordinates.x}</p>
+      <p>{coordinates.y}</p>
     </div>
   );
 };

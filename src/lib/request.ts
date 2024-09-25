@@ -1,8 +1,11 @@
 import axios from "axios";
-import store from "@/store/store";
-import { setIsAuth } from "@/store/slice";
 import { BaseQueryFn } from "@reduxjs/toolkit/dist/query/react";
 import { AxiosError, AxiosRequestConfig } from "axios";
+// import store from "@/store/store";
+import { setIsAuth } from "@/store/slice";
+
+const store = await import("@/store/store");
+const dispatch = store.useAppDispatch();
 
 const API_URL = "https://back.boson-higgs.link/api/";
 
@@ -41,7 +44,7 @@ axiosApi.interceptors.response.use(
         localStorage.setItem("refreshToken", response.data.refreshToken);
         return axiosApi.request(originalRequest);
       } catch (error: any) {
-        store.dispatch(setIsAuth(false));
+        dispatch(setIsAuth(false));
         localStorage.clear();
         window.history.replaceState("", "", "/");
         return Promise.reject(error);
@@ -52,9 +55,7 @@ axiosApi.interceptors.response.use(
 );
 
 export const axiosBaseQuery =
-  (
-    { baseUrl }: { baseUrl: string } = { baseUrl: "" }
-  ): BaseQueryFn<
+  (): BaseQueryFn<
     {
       url: string;
       method: AxiosRequestConfig["method"];
@@ -68,7 +69,7 @@ export const axiosBaseQuery =
   async ({ url, method, data, params, headers }: any) => {
     try {
       const result = await axiosApi({
-        url: baseUrl + url,
+        url: API_URL + url,
         method,
         data,
         params,

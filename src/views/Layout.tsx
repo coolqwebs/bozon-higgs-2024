@@ -22,8 +22,8 @@ const Layout = () => {
       <Header />
       <main className="w-[80%] h-[80%] flex items-start justify-center">
         <Outlet />
+        <Marquee />
       </main>
-      <Marquee />
     </div>
   );
 };

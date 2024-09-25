@@ -1,10 +1,39 @@
-import { createApi } from "@reduxjs/toolkit/query/react";
-import { axiosBaseQuery } from "@/lib/request";
-import { setProfileData } from "./slice";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { setIsAuth, setProfileData } from "./slice";
+const API_URL = "https://back.boson-higgs.link/api/";
+
+export const baseQuery = fetchBaseQuery({
+  baseUrl: API_URL,
+  prepareHeaders(headers) {
+    const token = localStorage.getItem("accessToken");
+    if (token) {
+      headers.append("Authorization", `Bearer ${token}`);
+    }
+    return headers;
+  },
+});
+
+const baseQueryWithReauth = async (args: any, api: any, extraOptions: any) => {
+  let result = await baseQuery(args, api, extraOptions);
+  if (result.error && result.error.status === 401) {
+    const refreshResult = await baseQuery(
+      { url: "/Auth/Refresh", method: "post" },
+      api,
+      extraOptions
+    );
+    if (refreshResult.data) {
+      result = await baseQuery(args, api, extraOptions);
+    } else {
+      api.dispatch(setIsAuth(false));
+    }
+  }
+
+  return result;
+};
 
 export const api = createApi({
   reducerPath: "api",
-  baseQuery: axiosBaseQuery({ baseUrl: "https://back.boson-higgs.link/api" }),
+  baseQuery: baseQueryWithReauth,
   tagTypes: ["Profile", "Leaderboard", "Levels", "Solution", "SubmitToken"],
   endpoints: (builder) => ({
     register: builder.mutation<unknown, { email: string; userName: string }>({
@@ -12,7 +41,14 @@ export const api = createApi({
         return {
           url: "/accounts/register",
           method: "post",
-          data: data,
+          body: data,
+          responseHandler: (response: any) => response.text(),
+        };
+      },
+      transformErrorResponse: (response: any) => {
+        return {
+          status: response.status,
+          data: JSON.parse(response.data),
         };
       },
       invalidatesTags: ["Profile"],
@@ -22,7 +58,7 @@ export const api = createApi({
         return {
           url: "/authorize/login",
           method: "post",
-          data: data,
+          body: data,
         };
       },
       invalidatesTags: ["Profile"],
@@ -86,6 +122,13 @@ export const api = createApi({
         return {
           url: "/levels/get-hint?id=" + levelId,
           method: "get",
+          responseHandler: (response: any) => response.text(),
+        };
+      },
+      transformErrorResponse: (response: any) => {
+        return {
+          status: response.status,
+          data: JSON.parse(response.data),
         };
       },
       providesTags: ["Levels"],
@@ -95,10 +138,18 @@ export const api = createApi({
         return {
           url: "/solutions/submit",
           method: "POST",
-          data: data,
+          body: data,
         };
       },
       invalidatesTags: ["Solution"],
+    }),
+    sendMarqueeMessage: builder.mutation<string, void>({
+      query: (message) => {
+        return {
+          url: "/marquees/send?message=" + message,
+          method: "post",
+        };
+      },
     }),
   }),
 });
@@ -113,4 +164,5 @@ export const {
   useGetLevelsAsAdminQuery,
   useSubmitNextLevelTokenMutation,
   useLazyGetLevelHintQuery,
+  useSendMarqueeMessageMutation,
 } = api;

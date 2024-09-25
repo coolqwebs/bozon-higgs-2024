@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "@/store/slice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { setupListeners } from "@reduxjs/toolkit/query";
+import authReducer from "./slice";
 import { api } from "./api";
 
 const store = configureStore({
@@ -11,6 +12,8 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware),
 });
+
+setupListeners(store.dispatch);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

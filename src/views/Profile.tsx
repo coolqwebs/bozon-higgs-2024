@@ -12,9 +12,9 @@ const Profile = () => {
         <li>
           &gt; Last Level Started DateTime:{" "}
           {user?.lastLevelStartedDateTime
-            ? dayjs(user.lastLevelStartedDateTime)
-                .utc(true)
-                .format("DD.MM.YYYY HH:mm")
+            ? dayjs(user.lastLevelStartedDateTime.slice(0, 19) + "Z").format(
+                "HH:mm"
+              )
             : "---"}
         </li>
         <li>

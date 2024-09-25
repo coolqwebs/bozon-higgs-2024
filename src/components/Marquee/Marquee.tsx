@@ -1,7 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Marquee.module.scss";
+import { cn } from "@/lib/utils";
+// import { useSendMarqueeMessageMutation } from "@/store/api";
+import { HubConnection } from "@microsoft/signalr";
+import { createSignalRConnection } from "@/lib/socket";
 
 const Marquee = () => {
+  const [connection, setConnection] = useState<HubConnection | null>(null);
+  useEffect(() => {
+    const client = createSignalRConnection();
+    setConnection(client);
+
+    return () => {
+      if (client) {
+        client.stop();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (connection) {
+      connection.on("Marquees", (message) => {
+        console.log("Message Marquees:", message);
+      });
+    }
+  }, [connection]);
+
+  // const [sendMessage, result] = useSendMarqueeMessageMutation();
   const [reverseAnimation, setReverseAnimation] = useState(false);
 
   const handleDoubleClick = () => {
@@ -9,8 +34,13 @@ const Marquee = () => {
   };
 
   return (
-    <div className={styles["main__container"]}>
-      <section className={styles["enable-animation"]}>
+    <div
+      className={cn(
+        styles["main__container"],
+        "w-[80%] h-8 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-3xl"
+      )}
+    >
+      <section className={cn(styles["enable-animation"])}>
         <div
           className={[
             styles.marquee,
