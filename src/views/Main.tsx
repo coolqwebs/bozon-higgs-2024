@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Main = () => {
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-3 md:py-5 lg:py-10 md:px-12 xl:px-32 backdrop-blur-3xl">
+    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-3 md:py-5 lg:py-10 md:px-12 xl:px-18 2xl:px-24 backdrop-blur-3xl">
       <article className="h-full flex flex-col gap-5 overflow-auto text-2xl">
         <p>
           The

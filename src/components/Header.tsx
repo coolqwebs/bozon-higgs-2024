@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header className="w-[80%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex flex-wrap items-center justify-between">
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex items-center justify-center">
         <Link to="/">
           <img
             src={Logo}

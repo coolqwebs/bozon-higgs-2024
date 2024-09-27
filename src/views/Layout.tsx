@@ -20,7 +20,7 @@ const Layout = () => {
   return (
     <div className="w-svw h-svh flex flex-col items-center gap-10 py-5 font-mono bg-[url('/noise1.gif')] bg-contain">
       <Header />
-      <main className="w-[80%] h-[80%] flex items-start justify-center">
+      <main className="w-[80%] h-[80%] flex flex-col gap-5 items-start justify-center">
         <Outlet />
         <Marquee />
       </main>

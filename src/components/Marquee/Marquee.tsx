@@ -56,11 +56,12 @@ const Marquee = () => {
   }, [connection]);
 
   return (
-    <section className="w-[80%] h-8 absolute bottom-0 mx-auto mb-1 backdrop-blur-3xl flex gap-5 items-center">
+    <section className="w-full h-8 mx-auto mb-1 backdrop-blur-3xl flex gap-5 items-center">
       <section
         className={cn(
           styles["enable-animation"],
-          "w-[70%] h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl"
+          "w-[70%] h-8 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl",
+          !isAuth && "w-full"
         )}
         key={marquees}
       >
