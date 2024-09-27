@@ -41,7 +41,7 @@ const Timer = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "w-full order-last md:order-none md:w-32 flex gap-1 justify-center items-center text-xl lg:text-2xl xl:text-3xl",
+        "w-full order-last md:order-none md:w-32 flex gap-1 justify-center items-center text-xl lg:text-2xl",
         className
       )}
     >
