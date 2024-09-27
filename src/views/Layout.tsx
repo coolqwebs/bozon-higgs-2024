@@ -16,9 +16,9 @@ const Layout = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
-
+  // bg-[url('/noise1.gif')]
   return (
-    <div className="w-svw h-svh flex flex-col items-center gap-10 py-5 font-mono bg-[url('/noise1.gif')] bg-contain">
+    <div className="w-svw h-svh flex flex-col items-center gap-10 py-5 font-mono">
       <Header />
       <main className="w-[80%] h-[80%] flex flex-col gap-5 items-start justify-center">
         <Outlet />
