@@ -1,7 +1,7 @@
 @tailwind base;
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -10,7 +10,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #cbd5e1;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 @tailwind components;
@@ -80,8 +80,35 @@
         brightness(108%) contrast(100%);
     }
 
-    .boxShadow {
-      box-shadow: 0 0 5px #6b26d9, 0 0 25px #6b26d9, 0 0 50px #6b26d9, 0 0 100px;
+    @media screen and (max-width: 640px) {
+      .logo {
+        width: 50px !important;
+      }
+    }
+    @media screen and (min-width: 640px) {
+      .logo {
+        width: 150px !important;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 150px !important;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .logo {
+        width: 200px !important;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      .logo {
+        width: 300px !important;
+      }
+    }
+    @media screen and (min-width: 1536px) {
+      .logo {
+        width: 400px !important;
+      }
     }
   }
 }

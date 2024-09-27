@@ -41,14 +41,14 @@ const Timer = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "w-32 flex gap-2 justify-center items-center text-4xl",
+        "w-full order-last md:order-none md:w-32 flex gap-1 justify-center items-center text-xl lg:text-2xl xl:text-3xl",
         className
       )}
     >
       {!isGameStarted && "-"}
-      <span>{timeLeft.days}</span>:<span>{padNumber(timeLeft.hours, 2)}</span>:
-      <span>{padNumber(timeLeft.minutes, 2)}</span>:
-      <span>{padNumber(timeLeft.seconds, 2)}</span>
+      <p>{timeLeft.days}</p>:<p>{padNumber(timeLeft.hours, 2)}</p>:
+      <p>{padNumber(timeLeft.minutes, 2)}</p>:
+      <p>{padNumber(timeLeft.seconds, 2)}</p>
     </div>
   );
 };

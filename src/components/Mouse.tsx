@@ -13,7 +13,7 @@ const Mouse = () => {
     window.addEventListener("mousemove", handleMouseMove);
   }, []);
   return (
-    <div className="w-20 h-20 mx-5 text-right flex flex-col items-end justify-center gap-2">
+    <div className="w-20 h-20 mx-5 text-right hidden lg:flex flex-col items-end justify-center gap-2">
       <p>{coordinates.x}</p>
       <p>{coordinates.y}</p>
     </div>

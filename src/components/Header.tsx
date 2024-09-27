@@ -29,35 +29,31 @@ const Header = () => {
   };
 
   return (
-    <header className="w-[80%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex items-center justify-between">
+    <header className="w-[80%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex flex-wrap items-center justify-between">
       <div className="flex items-center justify-center gap-8">
         <Link to="/">
           <img
             src={Logo}
             alt=""
-            className="logo -mb-6"
-            width="400"
-            height="20"
-            // style={{
-            //   filter:
-            //     "invert(21%) sepia(75%) saturate(3822%) hue-rotate(257deg) brightness(83%) contrast(105%)",
-            // }}
+            className="logo md:-mb-3 lg:-mb-4 xl:-mb-6"
+            // width="400"
+            // height="20"
           />
         </Link>
       </div>
-      <Timer className="md:order-last lg:-order-none" />
+      <Timer />
       <Mouse />
       <nav>
         <ul className="flex gap-8">
-          <li className="text-2xl">
+          <li className="text-2xl hidden 2xl:block">
             <Link to="/scoreboard">Scoreboard</Link>
           </li>
           {isAuth && (
-            <li className="text-2xl">
+            <li className="text-2xl hidden 2xl:block">
               <Link to="/challenges">Challenges</Link>
             </li>
           )}
-          <li className="text-2xl">
+          <li className="text-2xl hidden 2xl:block">
             <Link to="/faq">FAQ</Link>
           </li>
 
@@ -77,6 +73,27 @@ const Header = () => {
                 <DropdownMenuItem>
                   <Link className="text-2xl w-full" to="/profile">
                     Profile
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    className="text-2xl w-full block 2xl:hidden "
+                    to="/scoreboard"
+                  >
+                    Scoreboard
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    className="text-2xl w-full block 2xl:hidden "
+                    to="/challenges"
+                  >
+                    Challenges
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link className="text-2xl w-full block 2xl:hidden " to="/faq">
+                    FAQ
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />

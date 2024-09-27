@@ -10,10 +10,10 @@ const FAQ = () => {
   return (
     <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-xl overflow-y-auto">
       <h2 className="text-3xl mb-5 text-center">FAQ</h2>
-      <div className="w-[80%]">
+      <div className="w-full md:w-[80%]">
         <Accordion type="multiple" className="w-full">
           <AccordionItem value="rules">
-            <AccordionTrigger>Rules</AccordionTrigger>
+            <AccordionTrigger className="text-left">Rules</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-2 px-3">
               <p>
                 You must follow a number of rules and restrictions to win a
@@ -52,14 +52,16 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="participate">
-            <AccordionTrigger>What do I need to participate?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              What do I need to participate?
+            </AccordionTrigger>
             <AccordionContent>
               To participate you need to be a registered participant of DevFest
               2024 and have your own laptop.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="requirements">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               What are the minimum system requirements for participation?
             </AccordionTrigger>
             <AccordionContent>
@@ -68,7 +70,7 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="without-laptop">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               Can I participate without a laptop?
             </AccordionTrigger>
             <AccordionContent>
@@ -76,21 +78,27 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="prizes">
-            <AccordionTrigger>What will the winners get?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              What will the winners get?
+            </AccordionTrigger>
             <AccordionContent>
               The first 5 participants who pass all levels will receive a
               one-year subscription to JetBrains products.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="hints">
-            <AccordionTrigger>How do hints work?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              How do hints work?
+            </AccordionTrigger>
             <AccordionContent>
               Hints will be activated 30 minutes after you begin solving a
               level.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="scoreboard">
-            <AccordionTrigger>How does the scoreboard work?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              How does the scoreboard work?
+            </AccordionTrigger>
             <AccordionContent>
               Participants are ranked by the number of solved problems. If two
               players have solved the same number of problems, the one who did
@@ -98,13 +106,15 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="team">
-            <AccordionTrigger>Can I work in a team?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              Can I work in a team?
+            </AccordionTrigger>
             <AccordionContent>
               Yes, but a team can have a maximum of 3 people.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="time-limit">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               Is there a time limit for solving each problem?
             </AccordionTrigger>
             <AccordionContent>
@@ -113,7 +123,7 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="looser">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               What if I don't manage to solve all the tasks before the end of
               the event?
             </AccordionTrigger>
@@ -125,14 +135,16 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="skip">
-            <AccordionTrigger>Can I skip a level?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              Can I skip a level?
+            </AccordionTrigger>
             <AccordionContent>
               No, each level must be solved to unlock the next. You cannot skip
               levels.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="attempts">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               How many attempts do I have to solve a problem?
             </AccordionTrigger>
             <AccordionContent>
@@ -141,7 +153,7 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="late-arrival">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               Can I start the game later, for example, at 12:00?
             </AccordionTrigger>
             <AccordionContent>
@@ -150,7 +162,7 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="impossible">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               What should I do if a problem seems impossible to solve?
             </AccordionTrigger>
             <AccordionContent>
@@ -159,14 +171,16 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="don't-do-this">
-            <AccordionTrigger>Can I hack the system?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              Can I hack the system?
+            </AccordionTrigger>
             <AccordionContent>
               No, any attempts to hack the system are strictly prohibited
               (Please, just don't do this).
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="when-&-how">
-            <AccordionTrigger>
+            <AccordionTrigger className="text-left">
               When and how will the winners be announced?
             </AccordionTrigger>
             <AccordionContent>
@@ -175,7 +189,9 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="who-we-are">
-            <AccordionTrigger>Who we are?</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              Who we are?
+            </AccordionTrigger>
             <AccordionContent>
               <p>We are a team of four great developers:</p>
               <ul className="flex flex-col gap-2 ml-4 list-disc">

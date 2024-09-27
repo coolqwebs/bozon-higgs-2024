@@ -133,17 +133,24 @@ export const api = createApi({
       },
       providesTags: ["Levels"],
     }),
-    submitSolution: builder.mutation<{ code: string; target: number }, void>({
+    submitSolution: builder.mutation<void, { code: string; target: number }>({
       query: (data) => {
         return {
           url: "/solutions/submit",
           method: "POST",
           body: data,
+          responseHandler: (response: any) => response.text(),
+        };
+      },
+      transformErrorResponse: (response: any) => {
+        return {
+          status: response.status,
+          data: JSON.parse(response.data),
         };
       },
       invalidatesTags: ["Solution"],
     }),
-    sendMarqueeMessage: builder.mutation<string, void>({
+    sendMarqueeMessage: builder.mutation<void, string>({
       query: (message) => {
         return {
           url: "/marquees/send?message=" + message,
@@ -165,4 +172,5 @@ export const {
   useSubmitNextLevelTokenMutation,
   useLazyGetLevelHintQuery,
   useSendMarqueeMessageMutation,
+  useSubmitSolutionMutation,
 } = api;

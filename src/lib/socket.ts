@@ -6,7 +6,9 @@ import {
 
 export const createSignalRConnection = (): HubConnection => {
   const connection = new HubConnectionBuilder()
-    .withUrl("https://back.boson-higgs.link/marqueesHub")
+    .withUrl("https://back.boson-higgs.link/marqueesHub", {
+      withCredentials: false,
+    })
     .withAutomaticReconnect()
     .configureLogging(LogLevel.Information)
     .build();
