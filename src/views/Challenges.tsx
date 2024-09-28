@@ -120,7 +120,7 @@ const Challenges = () => {
     );
   }
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-xl">
+    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex flex-col items-center backdrop-blur-xl overflow-auto">
       <div className="w-full h-full flex">
         <aside className="min-w-min border-r-[2px] border-collapse border-gray-500 dark:border-slate-300">
           <ul className="h-full flex flex-col gap-5">
@@ -149,7 +149,7 @@ const Challenges = () => {
               <li
                 key={level.id}
                 className={cn(
-                  "w-full h-[20%]  flex items-center justify-center"
+                  "w-full h-[20%] flex items-center justify-center"
                 )}
               >
                 <Button

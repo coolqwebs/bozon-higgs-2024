@@ -13,8 +13,9 @@ import { useAppDispatch, useAppSelector } from "@/store/store";
 import { api } from "@/store/api";
 import { setIsAuth } from "@/store/slice";
 import Mouse from "./Mouse";
+import { cn } from "@/lib/utils";
 
-const Header = () => {
+const Header = ({ className }: { className?: string }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
@@ -29,10 +30,15 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full h-[11%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex flex-wrap items-center justify-between">
+    <header
+      className={cn(
+        "w-full px-5 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex flex-wrap items-center justify-between",
+        className
+      )}
+    >
       <div className="flex items-center justify-center">
         <Link to="/">
-          <img src={Logo} alt="" className="logo md:-mb-3 lg:-mb-4 xl:-mb-6" />
+          <img src={Logo} alt="" className="logo -mb-3" />
         </Link>
       </div>
       <Timer />
@@ -70,26 +76,26 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
               ) : (
-                <DropdownMenuItem className="block 2xl:hidden">
+                <DropdownMenuItem className="flex 2xl:hidden">
                   <Link className="text-2xl w-full" to="/login">
                     Sign in
                   </Link>
                 </DropdownMenuItem>
               )}
 
-              <DropdownMenuItem className="block 2xl:hidden">
+              <DropdownMenuItem className="flex 2xl:hidden">
                 <Link className="text-2xl w-full" to="/scoreboard">
                   Scoreboard
                 </Link>
               </DropdownMenuItem>
               {isAuth && (
-                <DropdownMenuItem className="block 2xl:hidden">
+                <DropdownMenuItem className="flex 2xl:hidden">
                   <Link className="text-2xl w-full " to="/challenges">
                     Challenges
                   </Link>
                 </DropdownMenuItem>
               )}
-              <DropdownMenuItem className="block 2xl:hidden">
+              <DropdownMenuItem className="flex 2xl:hidden">
                 <Link className="text-2xl w-full" to="/faq">
                   FAQ
                 </Link>
