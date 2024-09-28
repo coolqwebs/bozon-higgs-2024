@@ -1,4 +1,14 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  background-image: url("./noise1.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -12,9 +22,6 @@
   background-color: #cbd5e1;
   border-radius: 4px;
 }
-
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   :root {
