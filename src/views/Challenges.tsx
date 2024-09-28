@@ -193,7 +193,7 @@ const Challenges = () => {
                 >
                   <h3 className="text-2xl mb-5 text-center">{level.name}</h3>
                   <div className="w-full h-[80%] overflow-auto">
-                    <Markdown remarkPlugins={[remarkGfm]}>
+                    <Markdown remarkPlugins={[remarkGfm]} className={"text-xl"}>
                       {level.description}
                     </Markdown>
                   </div>

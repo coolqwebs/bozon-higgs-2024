@@ -134,7 +134,7 @@ export const api = createApi({
       },
       providesTags: ["Levels"],
     }),
-    submitSolution: builder.mutation<void, { code: string; lang: string }>({
+    submitSolution: builder.mutation<any, { code: string; lang: string }>({
       query: (data) => {
         return {
           url: "/solutions/submit",
@@ -143,13 +143,6 @@ export const api = createApi({
             code: data.code,
             target: getTargetByLang(data.lang),
           },
-          responseHandler: (response: any) => response.text(),
-        };
-      },
-      transformErrorResponse: (response: any) => {
-        return {
-          status: response.status,
-          data: JSON.parse(response.data),
         };
       },
       invalidatesTags: ["Solution"],

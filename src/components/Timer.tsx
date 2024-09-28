@@ -22,14 +22,14 @@ const Timer = ({ className }: { className?: string }) => {
       const now = new Date().getTime();
       const difference = now - targetDate;
       if (difference > 0) setIsGameStarted(true);
-      const days = Math.abs(Math.floor(difference / (1000 * 60 * 60 * 24)));
+      const days = Math.abs(Math.ceil(difference / (1000 * 60 * 60 * 24)));
       const hours = Math.abs(
-        Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        Math.ceil((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
       );
       const minutes = Math.abs(
-        Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+        Math.ceil((difference % (1000 * 60 * 60)) / (1000 * 60))
       );
-      const seconds = Math.abs(Math.floor((difference % (1000 * 60)) / 1000));
+      const seconds = Math.abs(Math.ceil((difference % (1000 * 60)) / 1000));
 
       setTimeLeft({ days, hours, minutes, seconds });
     };
@@ -46,7 +46,12 @@ const Timer = ({ className }: { className?: string }) => {
       )}
     >
       {!isGameStarted && "-"}
-      <p>{timeLeft.days}</p>:<p>{padNumber(timeLeft.hours, 2)}</p>:
+      {timeLeft.days > 0 && (
+        <>
+          <p>{timeLeft.days}</p>:
+        </>
+      )}
+      <p>{padNumber(timeLeft.hours, 2)}</p>:
       <p>{padNumber(timeLeft.minutes, 2)}</p>:
       <p>{padNumber(timeLeft.seconds, 2)}</p>
     </div>

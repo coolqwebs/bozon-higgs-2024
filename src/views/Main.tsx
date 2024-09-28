@@ -35,7 +35,7 @@ const Main = () => {
           <li>- 🎯 The desire for victory :&#41;</li>
         </ul>
         <img
-          className="w-[90%] 2xl:w-[50%] mx-auto object-contain border border-gray-500 dark:border-slate-300"
+          className="w-[30%] mx-auto object-contain border border-gray-500 dark:border-slate-300"
           src="hazker.webp"
           alt="hazker"
         />

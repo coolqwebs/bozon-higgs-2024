@@ -78,11 +78,11 @@ const Marquee = () => {
         >
           <Input
             name="marqueeMessage"
-            placeholder="Send message to others"
+            placeholder="Send message"
             className="w-full h-full py-3 px-5 placeholder:text-xl"
             ref={inputRef}
           />
-          <Button size="lg" className="h-full">
+          <Button size="lg" variant={"secondary"} className="h-full">
             {result.isLoading ? <Spinner /> : "Send"}
           </Button>
         </form>

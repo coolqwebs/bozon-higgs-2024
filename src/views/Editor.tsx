@@ -7,7 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { langStarterCode } from "@/lib/editor";
+import { getStatusById, langStarterCode } from "@/lib/editor";
 import { useSubmitSolutionMutation } from "@/store/api";
 import { useToast } from "@/components/ui/use-toast";
 import { Spinner } from "@/components/ui/spinner";
@@ -32,6 +32,7 @@ const EditorPage = () => {
   const [code, setCode] = useState<string>(langStarterCode[lang]);
 
   const [submit, result] = useSubmitSolutionMutation();
+
   useEffect(() => {
     setCode(langStarterCode[lang]);
   }, [lang]);
@@ -39,12 +40,30 @@ const EditorPage = () => {
   const submitCode = async () => {
     try {
       const res = await submit({ code, lang }).unwrap();
-      console.log(res);
-      toast({
-        variant: "default",
-        title: "You've successfully solved this challenge!",
-        description: "Check your email for next steps.",
-      });
+      // {"id":1130914,"status":11,"testPassed":6,"timeUsed":156,"memoryUsed":0,"error":" ","message":"ya0WGoCQOSNlZTPMroRgVTqc8GZlpWMoVmUhrOrz2R5cWyY4GjF2BW5rm7HZF3SG"}
+      if (res?.status === 11) {
+        toast({
+          variant: "default",
+          title: "Congrats! 🎉🎉🎉 You've successfully solved this challenge!",
+          description: (
+            <>
+              <p>Here is your token to get to the next level: </p>
+              <p>{res?.message}</p>
+            </>
+          ),
+        });
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Something went wrong",
+          description: (
+            <>
+              <p>{getStatusById(res?.status)}</p>
+              {res?.error.trim() && <p>{res.error}</p>}
+            </>
+          ),
+        });
+      }
     } catch (error: any) {
       toast({
         variant: "destructive",
@@ -56,8 +75,8 @@ const EditorPage = () => {
 
   return (
     <section className="w-full h-full overflow-auto border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex gap-5 items-center backdrop-blur-xl">
-      <section className="h-full flex-1 p-3 flex flex-col gap-5 overflow-x-auto">
-        <h1 className="text-3xl font-bold">Задача F. Шифровка</h1>
+      <section className="h-full flex-1 p-3 flex flex-col gap-3 overflow-x-auto">
+        <h1 className="text-3xl font-bold">Шифровка</h1>
         <p className="text-xs">Ограничение по времени: 1 сек</p>
         <p className="text-xs">Ограничение по памяти: 256 Мб</p>
         <p>
@@ -100,12 +119,22 @@ const EditorPage = () => {
           <tbody>
             <tr>
               <td className="border-[2px] border-gray-500 dark:border-slate-300 p-3">
-                <p>1</p>
+                <p>l</p>
                 <p>10</p>
                 <p>4 9 0 0 3 27 3 30 0 8</p>
               </td>
               <td className="border-[2px] border-gray-500 dark:border-slate-300 p-3">
                 <p>helloworld</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-[2px] border-gray-500 dark:border-slate-300 p-3">
+                <p>a</p>
+                <p>7</p>
+                <p>6 5 10 5 10 5</p>
+              </td>
+              <td className="border-[2px] border-gray-500 dark:border-slate-300 p-3">
+                <p>banana</p>
               </td>
             </tr>
           </tbody>
@@ -130,9 +159,10 @@ const EditorPage = () => {
               <SelectItem value="fsharp">F# 3.0</SelectItem>
             </SelectContent>
           </Select>
-          <Button onClick={submitCode}>
-            {result.isLoading ? <Spinner /> : "Submit"}
-          </Button>
+          <span className="text-xs">
+            This is not fully functional editor. Better to use your own code
+            editor and just paste here the solution.
+          </span>
         </div>
 
         <AceEditor
@@ -156,10 +186,9 @@ const EditorPage = () => {
           }}
           style={{ width: "100%", flex: 1, borderRadius: "10px" }}
         />
-        <span className="text-xs">
-          This is not fully functional editor. Better to use your own code
-          editor and just paste here the solution.
-        </span>
+        <Button onClick={submitCode}>
+          {result.isLoading ? <Spinner /> : "Submit"}
+        </Button>
       </section>
     </section>
   );

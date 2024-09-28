@@ -45,7 +45,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "editor",
-        element: <EditorPage />,
+        element: (
+          <WithAuth>
+            <EditorPage />
+          </WithAuth>
+        ),
       },
     ],
   },

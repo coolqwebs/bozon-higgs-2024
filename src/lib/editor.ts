@@ -1,16 +1,14 @@
 export const langStarterCode = {
   javascript: `function add(a, b) {\n  return a + b;\n}`,
   python: "print('Hello World!')",
-  csharp: `using System; 
-    
-class Program { 
-    static void Main(string[] args) { 
-        Console.WriteLine("Hello World!"); 
-        Console.ReadKey(); 
-    } 
-} 
+  csharp: `using System;
 
-  `,
+class Program {
+    static void Main(string[] args) {
+        Console.WriteLine("Hello World!");
+        Console.ReadKey();
+    }
+} `,
   java: `class Solution
 {
     public static void main(String []args)
@@ -118,8 +116,6 @@ export const getTargetByLang = (lang: string): number => {
       return 22;
   }
 };
-
-// {"id":1130448,"status":1,"testPassed":0,"timeUsed":0,"memoryUsed":0,"error":null}
 
 export const compilerResponse = [
   {
@@ -237,3 +233,7 @@ export const compilerResponse = [
     IsVisible: true,
   },
 ];
+
+export const getStatusById = (id: number) => {
+  return compilerResponse.find((item) => item.Id === id)?.Name;
+};
