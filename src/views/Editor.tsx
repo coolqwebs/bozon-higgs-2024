@@ -1,7 +1,3 @@
-import AceEditor from "react-ace";
-import "ace-builds/src-noconflict/mode-java";
-import "ace-builds/src-noconflict/theme-monokai";
-import "ace-builds/src-noconflict/ext-language_tools";
 import { useEffect, useState } from "react";
 import {
   Select,
@@ -16,6 +12,16 @@ import { useSubmitSolutionMutation } from "@/store/api";
 import { useToast } from "@/components/ui/use-toast";
 import { Spinner } from "@/components/ui/spinner";
 
+import AceEditor from "react-ace";
+import "ace-builds/src-min-noconflict/ext-searchbox";
+import "ace-builds/src-noconflict/mode-java";
+import "ace-builds/src-noconflict/mode-python";
+import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/mode-csharp";
+import "ace-builds/src-noconflict/mode-c9search";
+import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/ext-language_tools";
+
 type Lang = keyof typeof langStarterCode;
 const EditorPage = () => {
   const { toast } = useToast();
@@ -29,9 +35,8 @@ const EditorPage = () => {
   }, [lang]);
 
   const submitCode = async () => {
-    console.log(code);
     try {
-      const res = await submit({ code, target: 0 }).unwrap();
+      const res = await submit({ code, lang }).unwrap();
       console.log(res);
       toast({
         variant: "default",
@@ -118,6 +123,7 @@ const EditorPage = () => {
               <SelectItem value="csharp">C#</SelectItem>
               <SelectItem value="java">Java</SelectItem>
               <SelectItem value="python">Python</SelectItem>
+              <SelectItem value="cpp">C++</SelectItem>
             </SelectContent>
           </Select>
           <Button onClick={submitCode}>

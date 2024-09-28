@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setIsAuth, setProfileData } from "./slice";
+import { getTargetByLang } from "@/lib/editor";
 const API_URL = "https://back.boson-higgs.link/api/";
 
 export const baseQuery = fetchBaseQuery({
@@ -133,12 +134,15 @@ export const api = createApi({
       },
       providesTags: ["Levels"],
     }),
-    submitSolution: builder.mutation<void, { code: string; target: number }>({
+    submitSolution: builder.mutation<void, { code: string; lang: string }>({
       query: (data) => {
         return {
           url: "/solutions/submit",
           method: "POST",
-          body: data,
+          body: {
+            code: data.code,
+            target: getTargetByLang(data.lang),
+          },
           responseHandler: (response: any) => response.text(),
         };
       },

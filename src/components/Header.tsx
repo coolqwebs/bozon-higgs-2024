@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex flex-wrap items-center justify-between">
+    <header className="w-full h-[11%] px-12 py-2 border-[2px] border-gray-500 dark:border-slate-300 rounded-xl backdrop-blur-xl flex flex-wrap items-center justify-between">
       <div className="flex items-center justify-center">
         <Link to="/">
           <img src={Logo} alt="" className="logo md:-mb-3 lg:-mb-4 xl:-mb-6" />
