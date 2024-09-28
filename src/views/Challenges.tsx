@@ -12,8 +12,7 @@ import {
 import { useAppSelector } from "@/store/store";
 import { CircleCheckBig } from "lucide-react";
 import { useRef, useState } from "react";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import MarkdownPreview from "@uiw/react-markdown-preview";
 const blankLevels = [
   {
     token: "",
@@ -119,7 +118,9 @@ const Challenges = () => {
       toast({
         variant: "default",
         title: "Hint",
-        description: <Markdown remarkPlugins={[remarkGfm]}>{hint}</Markdown>,
+        description: (
+          <MarkdownPreview source={hint} className="bg-transparent" />
+        ),
       });
     } catch (error: any) {
       toast({
@@ -193,9 +194,10 @@ const Challenges = () => {
                 >
                   <h3 className="text-2xl mb-5 text-center">{level.name}</h3>
                   <div className="w-full h-[80%] overflow-auto">
-                    <Markdown remarkPlugins={[remarkGfm]} className={"text-xl"}>
-                      {level.description}
-                    </Markdown>
+                    <MarkdownPreview
+                      source={level.description}
+                      className="bg-transparent text-xl font-mono"
+                    />
                   </div>
                   {(user?.levelType as number) > level.type ? (
                     <div className="w-full flex-1 flex flex-col gap-5 justify-center items-center">
