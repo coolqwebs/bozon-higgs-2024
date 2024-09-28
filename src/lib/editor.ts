@@ -1,31 +1,17 @@
 export const langStarterCode = {
   javascript: `function add(a, b) {\n  return a + b;\n}`,
   python: "print('Hello World!')",
-  csharp: `// C# program to print Hello World! 
-using System; 
-
-// namespace declaration 
-namespace HelloWorldApp { 
+  csharp: `using System; 
     
-    // Class declaration 
-    class Geeks { 
-        
-        // Main Method 
-        static void Main(string[] args) { 
-            
-            // statement 
-            // printing Hello World! 
-            Console.WriteLine("Hello World!"); 
-            
-            // To prevents the screen from 
-            // running and closing quickly 
-            Console.ReadKey(); 
-        } 
+class Program { 
+    static void Main(string[] args) { 
+        Console.WriteLine("Hello World!"); 
+        Console.ReadKey(); 
     } 
 } 
 
   `,
-  java: `class Test
+  java: `class Solution
 {
     public static void main(String []args)
     {
@@ -39,6 +25,8 @@ int main() {
     std::cout << "Hello World!";
     return 0;
 }`,
+  fsharp: `printfn "Hello from F#"`,
+  swift: `print("Hello from Swift") `,
 };
 
 export const compilerLangueges = [
@@ -122,6 +110,10 @@ export const getTargetByLang = (lang: string): number => {
       return 3;
     case "cpp":
       return 27;
+    case "fsharp":
+      return 11;
+    case "swift":
+      return 24;
     default:
       return 22;
   }

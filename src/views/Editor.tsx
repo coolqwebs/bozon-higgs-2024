@@ -18,6 +18,8 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/mode-csharp";
+import "ace-builds/src-noconflict/mode-fsharp";
+import "ace-builds/src-noconflict/mode-swift";
 import "ace-builds/src-noconflict/mode-c9search";
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/ext-language_tools";
@@ -53,7 +55,7 @@ const EditorPage = () => {
   };
 
   return (
-    <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex gap-5 items-center backdrop-blur-xl">
+    <section className="w-full h-full overflow-auto border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 flex gap-5 items-center backdrop-blur-xl">
       <section className="h-full flex-1 p-3 flex flex-col gap-5 overflow-x-auto">
         <h1 className="text-3xl font-bold">Задача F. Шифровка</h1>
         <p className="text-xs">Ограничение по времени: 1 сек</p>
@@ -119,11 +121,13 @@ const EditorPage = () => {
               <SelectValue placeholder="Language" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="javascript">JavaScript</SelectItem>
-              <SelectItem value="csharp">C#</SelectItem>
+              <SelectItem value="javascript">NodeJS v14.5.0</SelectItem>
+              <SelectItem value="csharp">C# (.NET 7)</SelectItem>
               <SelectItem value="java">Java</SelectItem>
-              <SelectItem value="python">Python</SelectItem>
-              <SelectItem value="cpp">C++</SelectItem>
+              <SelectItem value="python">Python 3.11.x x64</SelectItem>
+              <SelectItem value="cpp">GNU C++17 (x64)</SelectItem>
+              <SelectItem value="swift">Swift v4.1.3</SelectItem>
+              <SelectItem value="fsharp">F# 3.0</SelectItem>
             </SelectContent>
           </Select>
           <Button onClick={submitCode}>

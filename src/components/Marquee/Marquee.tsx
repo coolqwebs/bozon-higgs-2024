@@ -56,7 +56,7 @@ const Marquee = () => {
   }, [connection]);
 
   return (
-    <section className="w-full h-8 mx-auto mb-1 backdrop-blur-3xl flex gap-5 items-center">
+    <section className="w-full h-8 mx-auto backdrop-blur-3xl flex gap-5 items-center">
       <section
         className={cn(
           styles["enable-animation"],

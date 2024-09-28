@@ -20,7 +20,7 @@ const Layout = () => {
   return (
     <div className="container h-screen py-3 font-mono">
       <Header className="h-20 mb-3" />
-      <main className="h-[calc(100vh-100px)] w-full flex flex-col gap-5 items-start justify-center">
+      <main className="h-[calc(100vh-110px)] w-full flex flex-col gap-5 items-start justify-center">
         <Outlet />
         <Marquee />
       </main>

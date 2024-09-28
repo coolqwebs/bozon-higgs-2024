@@ -20,7 +20,7 @@ const Profile = () => {
         <li>
           {" "}
           &gt; Total Spent Time: {user?.totalSpentTime}{" "}
-          {(user?.totalSpentTime as number) > 1 ? "minutes" : "minute"}
+          {Math.abs(user?.totalSpentTime as number) > 1 ? "minutes" : "minute"}
         </li>
         <li> &gt; Used Hints Count: {user?.usedHintsCount}</li>
       </ul>
