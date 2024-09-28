@@ -4,36 +4,35 @@ const Main = () => {
   return (
     <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-3 md:py-5 lg:py-10 md:px-12 xl:px-18 2xl:px-24 backdrop-blur-3xl overflow-auto">
       <article className="h-full flex flex-col gap-5 overflow-auto text-2xl">
+        <p>🎉 Welcome to the "Boson-Higgs" Challenge! 🎉</p>
         <p>
-          The
           <span className="text-lime-500 dark:text-[#C3D82C]">
-            {" "}
             "Boson-Higgs"{" "}
           </span>
           is an exciting and intriguing game inspired by the spirit of the
-          mysterious Cicada 3301 puzzles. The game contains 5 levels with
-          puzzles and tasks in the field of cryptography and programming.
+          mysterious Cicada 3301 puzzles.🧩 The game contains 5 levels with
+          puzzles and tasks in the field of cryptography and programming.🔐💻
         </p>
         <p>
           The tasks will become more difficult, so get ready for the real
-          challenge. The first 5 participants who successfully completed all 5
-          levels will be awarded a certificate from JetBrains, the winners will
-          be rewarded at the end of the event.
+          challenge. 💪The first 5 participants who successfully completed all 5
+          levels will be awarded a certificate from JetBrains 🎓, the winners
+          will be rewarded at the end of the event.🏆
         </p>
         <p>You will find:</p>
         <ul>
-          <li>- Cryptographic puzzles</li>
-          <li>- Solving problems using algorithms</li>
-          <li>- Images and text tasks</li>
-          <li>- And much more</li>
+          <li>- 🔒 Cryptographic puzzles</li>
+          <li>- 💡 Solving problems using algorithms</li>
+          <li>- 🖼️ Images and text tasks</li>
+          <li>- ✨ And much more</li>
         </ul>
-        <p>What you need to play:</p>
+        <p>🧰в What you need to play:</p>
         <ul>
-          <li>- Laptop or computer</li>
-          <li>- Knowledge of programming languages</li>
-          <li>- Some knowledge of cryptography</li>
-          <li>- Internet connection</li>
-          <li>- The desire for victory :&#41;</li>
+          <li>- 💻 Laptop or computer</li>
+          <li>- 🧠 Knowledge of programming languages</li>
+          <li>- 🔑 Some knowledge of cryptography</li>
+          <li>- 🌐 Internet connection</li>
+          <li>- 🎯 The desire for victory :&#41;</li>
         </ul>
         <img
           className="w-[90%] 2xl:w-[50%] mx-auto object-contain border border-gray-500 dark:border-slate-300"
@@ -57,7 +56,7 @@ const Main = () => {
               Discord server
             </a>
           </Button>
-          where you can connect with other players.
+          where you can connect with other players.💬
         </p>
       </article>
     </section>

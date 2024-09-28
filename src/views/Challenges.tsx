@@ -11,7 +11,7 @@ import {
 } from "@/store/api";
 import { useAppSelector } from "@/store/store";
 import { CircleCheckBig } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 const blankLevels = [
@@ -66,8 +66,20 @@ const Challenges = () => {
   const [getHint, hintResult] = useLazyGetLevelHintQuery();
   const [tab, setTab] = useState(0);
 
+  const timerRef = useRef(true);
+
   const submitTokenHandler = async (e: any) => {
     e.preventDefault();
+
+    if (!timerRef.current) {
+      toast({
+        variant: "destructive",
+        title: "Wait",
+        description: "You can submit again in a few seconds.",
+      });
+      return;
+    }
+
     const token = e.target.token.value;
     if (!token.trim()) {
       toast({
@@ -77,6 +89,12 @@ const Challenges = () => {
       });
       return;
     }
+
+    timerRef.current = false;
+    setTimeout(() => {
+      timerRef.current = true;
+    }, 10000);
+
     try {
       const res = await submitToken(token).unwrap();
       toast({
