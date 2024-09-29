@@ -15,7 +15,10 @@ import { useEffect } from "react";
 
 const Scoreboard = () => {
   const { toast } = useToast();
-  const { data, isLoading, error, isError } = useGetLeaderBoardQuery();
+  const { data, isLoading, error, isError } = useGetLeaderBoardQuery("", {
+    pollingInterval: 5000,
+    skipPollingIfUnfocused: true,
+  });
 
   useEffect(() => {
     if (isError) {
@@ -36,7 +39,6 @@ const Scoreboard = () => {
     );
   }
 
-  // console.log(dayjs.isUTC("2024-09-24T15:43:12.444606"));
   return (
     <section className="w-full h-full border-[2px] border-gray-500 dark:border-slate-300 rounded-xl p-5 backdrop-blur-xl text-2xl overflow-y-auto">
       <Table>
@@ -48,9 +50,9 @@ const Scoreboard = () => {
             <TableHead className="text-2xl">#</TableHead>
             <TableHead className="text-2xl">Name</TableHead>
             <TableHead className="text-right text-2xl">Current Level</TableHead>
-            <TableHead className="text-right text-2xl">
+            {/* <TableHead className="text-right text-2xl">
               Total Spent Time (minutes)
-            </TableHead>
+            </TableHead> */}
             <TableHead className="text-right text-2xl">
               Last Level Started Time
             </TableHead>
@@ -67,9 +69,9 @@ const Scoreboard = () => {
               <TableCell className="text-right text-2xl">
                 {user.levelType}
               </TableCell>
-              <TableCell className="text-right text-2xl">
+              {/* <TableCell className="text-right text-2xl">
                 {user.totalSpentTime}
-              </TableCell>
+              </TableCell> */}
               <TableCell className="text-right text-2xl">
                 {user.lastLevelStartedDateTime
                   ? dayjs(user.lastLevelStartedDateTime)

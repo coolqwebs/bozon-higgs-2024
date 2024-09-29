@@ -98,8 +98,8 @@ const Challenges = () => {
       const res = await submitToken(token).unwrap();
       toast({
         variant: "default",
-        title: "Success",
-        description: "Token submitted successfully",
+        title: "Congrats! 🎉🎉🎉 You've successfully solved this challenge!",
+        description: "Keep going and get to the next level.",
       });
       refetch();
       console.log(res);
