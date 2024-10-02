@@ -82,7 +82,7 @@ export const api = createApi({
       },
       providesTags: ["Profile"],
     }),
-    getLeaderBoard: builder.query<ILeaderboardData, any>({
+    getLeaderBoard: builder.query<ILeaderboardData, void>({
       query: () => {
         return {
           url: "/leader-boards",

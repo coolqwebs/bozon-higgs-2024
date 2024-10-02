@@ -15,10 +15,7 @@ import { useEffect } from "react";
 
 const Scoreboard = () => {
   const { toast } = useToast();
-  const { data, isLoading, error, isError } = useGetLeaderBoardQuery("", {
-    pollingInterval: 5000,
-    skipPollingIfUnfocused: true,
-  });
+  const { data, isLoading, error, isError } = useGetLeaderBoardQuery();
 
   useEffect(() => {
     if (isError) {
