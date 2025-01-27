@@ -1,5 +1,3 @@
----
-
 # 🌌 Boson-Higgs  
 
 Welcome to **Boson-Higgs**, an intriguing and exciting game inspired by the spirit of the mysterious Cicada 3301 puzzles. Are you ready to challenge your mind and test your skills in cryptography and programming? If yes, then dive into the adventure where the code is your key to unravel the mysteries!  
