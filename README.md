@@ -1,5 +1,3 @@
-Here’s a polished README file for the **Boson-Higgs** app:  
-
 ---
 
 # 🌌 Boson-Higgs  
